@@ -5,7 +5,7 @@
 #include <string>
 
 int main() {
-
+    //SidorovA IvanovA PetrovA SidorovB IvanovB PetrovB SidorovC IvanovC PetrovC SidorovD - для проверки, вставка для массива
     std::string sitizen[10] = {}; int j;
     for (int i = 0; i < 10; i++) {
         getline(std::cin, sitizen[i]);

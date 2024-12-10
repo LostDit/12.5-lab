@@ -1,0 +1,4 @@
+﻿  Использование assert.cpp
+C:\Users\maksi\source\repos\12.5 lab\Использование assert\Использование assert.cpp(9,14): warning C4305: инициализация: усечение из "double" в "float"
+C:\Users\maksi\source\repos\12.5 lab\Использование assert\Использование assert.cpp(9,33): warning C4305: инициализация: усечение из "double" в "float"
+  Использование assert.vcxproj -> C:\Users\maksi\source\repos\12.5 lab\x64\Debug\Использование assert.exe

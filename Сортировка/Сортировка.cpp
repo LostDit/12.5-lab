@@ -69,4 +69,6 @@ int main()
 
     std::cout << "Sorted array is: ";
     printArray(arr, n);
+
+    return 0;
 }

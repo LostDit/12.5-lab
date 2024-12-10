@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Многоквартирный дом", "Многоквартирный дом\Многоквартирный дом.vcxproj", "{EFFF111D-99AA-44C5-A3D1-DB31B4A67D8D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Сортировка", "Сортировка\Сортировка.vcxproj", "{06408FF7-437F-48A9-8090-B93C9045E39B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{EFFF111D-99AA-44C5-A3D1-DB31B4A67D8D}.Release|x64.Build.0 = Release|x64
 		{EFFF111D-99AA-44C5-A3D1-DB31B4A67D8D}.Release|x86.ActiveCfg = Release|Win32
 		{EFFF111D-99AA-44C5-A3D1-DB31B4A67D8D}.Release|x86.Build.0 = Release|Win32
+		{06408FF7-437F-48A9-8090-B93C9045E39B}.Debug|x64.ActiveCfg = Debug|x64
+		{06408FF7-437F-48A9-8090-B93C9045E39B}.Debug|x64.Build.0 = Debug|x64
+		{06408FF7-437F-48A9-8090-B93C9045E39B}.Debug|x86.ActiveCfg = Debug|Win32
+		{06408FF7-437F-48A9-8090-B93C9045E39B}.Debug|x86.Build.0 = Debug|Win32
+		{06408FF7-437F-48A9-8090-B93C9045E39B}.Release|x64.ActiveCfg = Release|x64
+		{06408FF7-437F-48A9-8090-B93C9045E39B}.Release|x64.Build.0 = Release|x64
+		{06408FF7-437F-48A9-8090-B93C9045E39B}.Release|x86.ActiveCfg = Release|Win32
+		{06408FF7-437F-48A9-8090-B93C9045E39B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

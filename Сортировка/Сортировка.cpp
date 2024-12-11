@@ -5,70 +5,33 @@
 //Числа выводятся от большего к меньшему.
 #include <iostream>
 
-void heapify(float arr[], int n, int i) //Пирамидальная сортировка (HeapSort) - полностью взял с поста на хабре заменив лишь небольшие участки
-{
-    int largest = i;
-    // Инициализируем наибольший элемент как корень
-    int l = 2 * i + 1; // левый = 2*i + 1
-    int r = 2 * i + 2; // правый = 2*i + 2
+int main() {
+    double numbers[15];
 
-    // Если левый дочерний элемент больше корня
-    if (l < n && arr[l] > arr[largest])
-        largest = l;
-
-    // Если правый дочерний элемент больше, чем самый большой элемент на данный момент
-    if (r < n && arr[r] > arr[largest])
-        largest = r;
-
-    // Если самый большой элемент не корень
-    if (largest != i)
-    {
-        std::swap(arr[i], arr[largest]);
-
-        // Рекурсивно преобразуем в двоичную кучу затронутое поддерево
-        heapify(arr, n, largest);
+    // Ввод чисел пользователем
+    std::cout << "Введите 15 дробных чисел: ";
+    for (int i = 0; i < 15; ++i) {
+        std::cin >> numbers[i];
     }
-}
 
-// Основная функция, выполняющая пирамидальную сортировку
-void heapSort(float arr[], int n)   {
-    // Построение кучи (перегруппируем массив)
-    for (int i = n / 2 - 1; i >= 0; i--)
-        heapify(arr, n, i);
-
-    // Один за другим извлекаем элементы из кучи
-    for (int i = n - 1; i >= 0; i--)
-    {
-        // Перемещаем текущий корень в конец
-        std::swap(arr[0], arr[i]);
-
-        // вызываем процедуру heapify на уменьшенной куче
-        heapify(arr, i, 0);
+    // Сортировка массива методом пузырька (от большего к меньшему)
+    for (int i = 0; i < 14; ++i) {
+        for (int j = 0; j < 14 - i; ++j) {
+            if (numbers[j] < numbers[j + 1]) {
+                // Обмен значений
+                double temp = numbers[j];
+                numbers[j] = numbers[j + 1];
+                numbers[j + 1] = temp;
+            }
+        }
     }
-}
 
-/* Вспомогательная функция для вывода на экран массива размера n*/
-void printArray(float arr[], int n) {
-    for (int i = n-1; i != 0; --i)
-        std::cout << arr[i] << " ";
-    std::cout << "\n";
-}
-
-// Управляющая программа
-int main()
-{
-    // { 1.2, 2.3, 1.11, 3.4, 5.5, 5.4, 5.3, 5.1, 1.5, 1.25, 5.41, 5.31, 5.11, 1.51, 1.251 }; //для проверки
-    float arr[15];
-    for (int i = 0; i < 15; i++) { // для ввода своих чисел
-        std::cout << "Enter a number "<< i+1 <<": ";
-        std::cin >> arr[i];
+    // Вывод отсортированного массива
+    std::cout << "Числа в порядке от большего к меньшему: ";
+    for (int i = 0; i < 15; ++i) {
+        std::cout << numbers[i] << " ";
     }
-    int n = sizeof(arr) / sizeof(arr[0]);
-
-    heapSort(arr, n);
-
-    std::cout << "Sorted array is: ";
-    printArray(arr, n);
+    std::cout << std::endl;
 
     return 0;
 }

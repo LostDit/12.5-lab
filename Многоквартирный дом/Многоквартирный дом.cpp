@@ -5,9 +5,10 @@
 #include <string>
 
 int main() {
-    //SidorovA IvanovA PetrovA SidorovB IvanovB PetrovB SidorovC IvanovC PetrovC SidorovD - для проверки, вставка для массива
+    //"SidorovA", "IvanovA", "PetrovA", "SidorovB", "IvanovB", "PetrovB", "SidorovC", "IvanovC", "PetrovC", "SidorovD" - для проверки, вставка для массива
     std::string sitizen[10] = {}; int j;
     for (int i = 0; i < 10; i++) {
+        std::cout << "Enter the tenant of the apartment "<< i+1 <<": ";
         getline(std::cin, sitizen[i]);
     }
     
@@ -16,7 +17,7 @@ int main() {
 
     if (j <= 0 || j > 10) {
         std::cout << "Out of range" << "\n";
-    }else std::cout << sitizen[j - 1] << "\n";
+    }else std::cout <<"The tenant of the house under the number " <<j<<": " << sitizen[j - 1] << "\n";
     
     return 0;
 }
